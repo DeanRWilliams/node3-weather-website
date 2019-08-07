@@ -15,7 +15,9 @@ request({ url: url, json:true }, (error, {body}) => {
         callback( undefined, {
             temperature: body.currently.temperature,
             rainprobability: body.currently.precipProbability,
-            forecast: 'It is currently ' + body.currently.temperature + ' degrees and there is ' + body.currently.precipProbability + ' chance of rain'
+            forecast: 'It is currently ' + body.currently.temperature + ' degrees and there is ' + body.currently.precipProbability + '% chance of rain',
+            temperatureHigh: 'High for the Day ' + body.daily.data[0].temperatureHigh + ' degrees',
+            temperatureLow: 'Low for the Day ' + body.daily.data[0].temperatureLow + ' degrees'
         })
         
     }

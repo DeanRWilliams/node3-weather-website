@@ -68,7 +68,9 @@ app.get('/weather', (req, res) => {
                 error: error,
                 location: location,
                 address: req.query.address,
-                forecast: forecastdata.forecast
+                forecast: forecastdata.forecast,
+                temperatureHigh: forecastdata.temperatureHigh,
+                temperatureLow: forecastdata.temperatureLow
             })
           })
     } )
